@@ -36,16 +36,16 @@ def increase1(K):
 
 def increase2(K):
     for i in range(K):
-        mutex1.acquire()
+        mutex2.acquire()
         try:
             second_obj.write(random.uniform(10.5, 75.5))
         finally:
-            mutex1.release()
-        mutex2.acquire()
+            mutex2.release()
+        mutex1.acquire()
         try:
             first_obj.write(random.uniform(10.5, 75.5))
         finally:
-            mutex2.release()
+            mutex1.release()
 
 count = random.randint(10, 20)
 threads = []
