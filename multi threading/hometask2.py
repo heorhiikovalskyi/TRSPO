@@ -13,7 +13,6 @@ class Value:
 
 first_obj = Value(0)
 second_obj = Value(0)
-
 def increase(K):
     for i in range(K):
         mutex1.acquire()
