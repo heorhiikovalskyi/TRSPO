@@ -40,5 +40,4 @@ for thread in threads:
     thread.join()
 
 print(time.time() - start)
-print(first_obj.value)
-print(second_obj.value)
+
